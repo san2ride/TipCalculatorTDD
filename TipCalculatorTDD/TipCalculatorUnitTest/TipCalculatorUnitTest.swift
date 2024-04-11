@@ -11,7 +11,7 @@ class whenCalculatingTipBasedOnTotalAmount: XCTestCase {
 
     func testShouldCalculateTipSuccessfully() {
         let tipCalculator = TipCalculator()
-        let tip = tipCalculator.calculate(total: 100, tipPercentage: 0.1)
+        let tip = try! tipCalculator.calculate(total: 100, tipPercentage: 0.1)
         XCTAssertEqual(10, tip)
     }
 }
@@ -24,5 +24,4 @@ class whenCalculatingTipBasedOnNegativeTotalAmount: XCTestCase {
             XCTAssertEqual(error as! TipCalculatorError, TipCalculatorError.invalidInput)
         }
     }
-    
 }
