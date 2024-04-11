@@ -36,6 +36,7 @@ struct CalculatorView: View {
                     tip = ""
                     
                     guard let total = Double(self.total) else {
+                        message = "Invalid Input"
                         return
                     }
                     do {
