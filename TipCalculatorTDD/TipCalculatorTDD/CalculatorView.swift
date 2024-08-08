@@ -33,7 +33,7 @@ struct CalculatorView: View {
                     .accessibilityIdentifier("tipPercenatgeSegmentedControl")
 
                 
-                Button("Calculate Tip") {
+                Button {
                     message = ""
                     tip = ""
                     
@@ -51,6 +51,8 @@ struct CalculatorView: View {
                     } catch {
                         message = error.localizedDescription
                     }
+                } label: {
+                    Text("Calculate Tip")
                 }.padding(.top, 20)
                 
                 Text(message)

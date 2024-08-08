@@ -37,3 +37,19 @@ class when_content_view_is_shown: XCTestCase {
         // clean up
     }
 }
+
+class when_calculate_tip_button_is_pressed: XCTestCase {
+    private var app: XCUIApplication!
+    
+    override func setUp() {
+        app = XCUIApplication()
+        continueAfterFailure = false
+        app.launch()
+        
+        let calculateTipButton = app.buttons
+    }
+    
+    func test_should_make_sure_that_tip_is_displayed_on_the_screen() {
+        
+    }
+}
