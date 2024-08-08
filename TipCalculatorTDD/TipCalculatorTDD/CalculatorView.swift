@@ -53,19 +53,20 @@ struct CalculatorView: View {
                     }
                 } label: {
                     Text("Calculate Tip")
+                        .accessibilityIdentifier("calculateTipButton")
                 }.padding(.top, 20)
                 
                 Text(message)
                     .padding(.top, 50)
-                
+                    .accessibilityIdentifier("messageText")
                 Spacer()
-                
                 Text(tip ?? "")
                     .font(.system(size: 54))
+                    .accessibilityIdentifier("tipText")
                 
                 Spacer()
                 .navigationTitle("Tip Calculator")
-            }
+            }.padding()
         }
     }
 }
